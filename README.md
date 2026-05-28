@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día Mamá</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, #b3003c, #ff3366, #ff6699, #ffd6e7);
+            position: relative;
+        }
+
+        /* Brillos del fondo */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            filter: blur(90px);
+            animation: mover 7s infinite alternate;
+        }
+
+        @keyframes mover {
+            from {
+                transform: translate(-120px, -80px);
+            }
+
+            to {
+                transform: translate(120px, 80px);
+            }
+        }
+
+        /* Tarjeta */
+        .card {
+            width: 90%;
+            max-width: 760px;
+            padding: 55px;
+            border-radius: 35px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(14px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            animation: entrada 1.4s ease;
+        }
+
+        @keyframes entrada {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Icono */
+        .icono {
+            font-size: 90px;
+            margin-bottom: 15px;
+            animation: latido 2s infinite;
+        }
+
+        @keyframes latido {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* TITULO */
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 25px;
+
+            text-shadow:
+                0 0 5px #fff,
+                0 0 15px #fff,
+                0 0 25px #ffccd5,
+                3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* TEXTO */
+        p {
+            font-size: 1.35rem;
+            line-height: 2;
+            color: #ffffff;
+            font-weight: 500;
+
+            text-shadow:
+                2px 2px 8px rgba(0, 0, 0, 0.8),
+                0 0 5px rgba(0, 0, 0, 0.6);
+
+            margin-bottom: 20px;
+        }
+
+        /* BOTONES */
+        .botones {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 16px 35px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: 0.4s;
+        }
+
+        /* Botón 1 */
+        .btn1 {
+            background: white;
+            color: #cc0052;
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.6);
+        }
+
+        .btn1:hover {
+            transform: translateY(-5px) scale(1.06);
+            background: #ffe5ec;
+        }
+
+        /* Botón 2 */
+        .btn2 {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn2:hover {
+            background: white;
+            color: #cc0052;
+            transform: translateY(-5px) scale(1.06);
+        }
+
+        /* Mensaje sorpresa */
+        .mensaje {
+            margin-top: 30px;
+            font-size: 1.25rem;
+            color: #fff;
+            font-weight: 600;
+            display: none;
+
+            text-shadow:
+                2px 2px 8px rgba(0, 0, 0, 0.8);
+
+            animation: fade 1s ease;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Corazones */
+        .corazon {
+            position: absolute;
+            color: white;
+            opacity: 0.8;
+            animation: subir linear infinite;
+        }
+
+        @keyframes subir {
+            from {
+                transform: translateY(100vh) scale(1);
+            }
+
+            to {
+                transform: translateY(-120vh) scale(1.8);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="corazon" style="left:8%; font-size:25px; animation-duration:8s;">❤</div>
+    <div class="corazon" style="left:22%; font-size:18px; animation-duration:10s;">❤</div>
+    <div class="corazon" style="left:45%; font-size:30px; animation-duration:7s;">❤</div>
+    <div class="corazon" style="left:67%; font-size:20px; animation-duration:9s;">❤</div>
+    <div class="corazon" style="left:88%; font-size:28px; animation-duration:11s;">❤</div>
+
+    <div class="card">
+
+        <div class="icono">🌹</div>
+
+        <h1>¡Feliz Día Mamá!</h1>
+
+        <p>
+            Gracias por estar siempre conmigo,
+            por cuidarme, apoyarme y llenar mi vida de amor.
+            te amo y eres lo mas valioso que tengo en mi vida, si tengo problemas solo me quiero echar en tu pecho y que me muevas como bebe jeje... te necesito mas de lo que te imaginas,eres mi motor... por ti lo sigo intentando, una y otra vez...
+        </p>
+
+        
+        <p>
+            Espero nunca pienses que fracasaste como madre, porque yo podria escribirte un libro entero contando lo bien que lo has hecho💖
+        </p>
+
+        <div class="botones">
+
+            <button class="btn1" onclick="mostrarMensaje()">
+                Ver Sorpresa ✨
+            </button>
+
+            <button class="btn2" onclick="cambiarTema()">
+                Cambiar Fondo 🌸
+            </button>
+
+        </div>
+
+        <div class="mensaje" id="mensaje">
+            🌷 Mamá, gracias por todo lo que haces por mí.
+            Me van a faltar rodillas para pedirte perdon por todas las veces que te hice llorar, te grite, reclame y trate de herirte.
+            Te amo muchísimo y siempre serás mi ejemplo. 💕
+        </div>
+
+    </div>
+
+    <script>
+
+        function mostrarMensaje() {
+            document.getElementById("mensaje").style.display = "block";
+        }
+
+        function cambiarTema() {
+            document.body.style.background =
+                "linear-gradient(135deg,#990033,#ff4d88,#ff99bb,#fff0f5)";
+        }
+
+    </script>
+
+</body>
+
+</html>
